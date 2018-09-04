@@ -11,7 +11,7 @@ Simple hyper ledger chaincode development tutorial
 8. go build (all should be fine)
 9. Opet 3 terminals (yup, 3) and cd to fabric-samples/chaincode-docker-devmode
 10. in Terminal 1 run  docker-compose -f docker-compose-simple.yaml up. Matrix style information will be written to console output. Dont panic!
-11. in Terminal 2 run docker exec -it chaincode
+11. in Terminal 2 run docker exec -it chaincode bash
 12. in Terminal 2 cd to spare
 13. in Terminal 2 go build
 14. in Terminal 2 run CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=mycc:0 ./spare (See this CORE_CHAINCODE_ID_NAME? It's name of your chain code). Last Console output log message will be starting up ... Dont panic!
