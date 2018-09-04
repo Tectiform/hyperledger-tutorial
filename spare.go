@@ -14,7 +14,7 @@ import (
 	"github.com/hyperledger/fabric/protos/peer"
 )
 
-// Spare implements a simple chaincode to manage an asset
+// Spare implements a simple chaincode to manage an asset 
 type Spare struct {
 }
 
