@@ -29,7 +29,7 @@ docker-compose -f docker-compose-simple.yaml up
 Matrix style information will be written to console output. Dont panic!
 11. in Terminal 2 run 
 ```console
-docker exec -it chaincode
+docker exec -it chaincode bash
 ```
 12. in Terminal 2 go to spare directory
 13. in Terminal 2 run 
