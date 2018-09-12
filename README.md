@@ -24,7 +24,7 @@ cd spare
 cd ../../chaincode-docker-devmode
 ```
 10. in Terminal 1 run 
-```console
+```shell
 docker-compose -f docker-compose-simple.yaml up
 ```
 Matrix style information will be written to console output. Dont panic!
