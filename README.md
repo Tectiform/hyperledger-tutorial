@@ -10,6 +10,7 @@ cd chaincode
 git clone https://github.com/Tectiform/hyperledger-tutorial.git spare
 ```
 You should endup with folder spare in chaincode folder.
+
 4. Open terminal and go to spare folder in chaincode folder.
 ```
 cd spare
@@ -27,6 +28,7 @@ cd ../../chaincode-docker-devmode
 docker-compose -f docker-compose-simple.yaml up
 ```
 Matrix style information will be written to console output. Dont panic!
+
 11. in Terminal 2 run 
 ```console
 docker exec -it chaincode bash
@@ -41,6 +43,7 @@ go build
 CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=mycc:0 ./spare 
 ```
 See this CORE_CHAINCODE_ID_NAME? It's name of your chain code. Last Console output log message will be starting up ... Dont panic!
+
 15. In Terminal 3 run 
 ```console
 docker exec -it cli bash
@@ -50,6 +53,7 @@ docker exec -it cli bash
 peer chaincode install -p chaincodedev/chaincode/spare -n mycc -v 0 
 ```
 See -n mycc? That's name of your chaincode and must be same as in step 14
+
 17. In Terminal 3 run 
 ```console
 peer chaincode instantiate -n mycc -v 0 -c '{"Args":[]}' -C myc
@@ -59,11 +63,15 @@ peer chaincode instantiate -n mycc -v 0 -c '{"Args":[]}' -C myc
 peer chaincode invoke -n mycc -c '{"Args":["addPartRecord", "P1", "Brake","123","No comment is a comment"]}' -C myc 
 ```
 P1 will be written at the end of the Console output log
+
 19. In Terminal 3 run 
 ```console
 peer chaincode invoke -n mycc -c '{"Args":["getPartRecord", "P1"]}' -C myc
 ```
 Previously entered data in JSON form will be written to the Console output.
+
 20. In Terminal 3 type exit and press enter
+
 21. In Terminal 2 press ctrl+c and exit
+
 22. In Terminal 1 press ctrl+c and when back to command prompt run docker-compose -f docker-compose-simple.yaml down 
